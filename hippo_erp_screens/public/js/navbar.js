@@ -213,6 +213,38 @@ const avatar = (navSubdiv) => {
     }
 }
 
+// const dropdownMenu = document.querySelector('.navbar-collapse.collapse.show');
+
+// if (dropdownMenu) {
+//     alert('hey')
+//     dropdownMenu.style.zIndex = '999999';
+//     dropdownMenu.style.background = '#fff';
+//     dropdownMenu.style.width = 'max-content';
+//     dropdownMenu.style.borderRight = '1px solid #ccc';
+//     dropdownMenu.style.marginTop = '10px';
+//     dropdownMenu.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+// }
+
+const target = document.querySelector('.navbar-collapse.collapse');
+
+if (target) {
+    const observer = new MutationObserver(() => {
+        if (target.classList.contains('show')) {
+            target.style.zIndex = '999999';
+            target.style.background = '#fff';
+            target.style.width = 'max-content';
+            target.style.marginTop = '10px';
+            target.style.boxShadow = '0 0px 8px #888';
+        }
+    });
+
+    observer.observe(target, {
+        attributes: true,
+        attributeFilter: ['class']
+    });
+}
+
+
 
 
 preloginNavbar();

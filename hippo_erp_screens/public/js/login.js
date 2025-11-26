@@ -117,6 +117,18 @@ const loginPage = () => {
                         const pagecardbodysecondary = pagecardbody.querySelector('.page-card-body');
                         const loginbutton = pagecardbody.querySelector('.page-card-actions button');
                         const poweredby = pagecardbody.querySelector('.social-logins.text-center');
+                        if (loginbutton) {
+                            loginbutton.style.backgroundColor = '#017bcf';
+                            loginbutton.style.borderRadius = '5px';
+                            loginbutton.style.boxShadow = '0px 0px 5px grey';
+
+                            loginbutton.addEventListener('mouseover', () => {
+                                loginbutton.style.backgroundColor = '#fc3f19d8';
+                            });
+                            loginbutton.addEventListener('mouseout', () => {
+                                loginbutton.style.backgroundColor = '#017bcf';
+                            })
+                        }
                         if (poweredby) {
                             poweredby.innerHTML = '';
                             poweredby.innerHTML = `
@@ -203,18 +215,7 @@ const loginPage = () => {
 
                             }
                         }
-                        if (loginbutton) {
-                            loginbutton.style.backgroundColor = '#017bcf';
-                            loginbutton.style.borderRadius = '5px';
-                            loginbutton.style.boxShadow = '0px 0px 5px grey';
 
-                            loginbutton.addEventListener('mouseover', () => {
-                                loginbutton.style.backgroundColor = '#fc3f19d8';
-                            });
-                            loginbutton.addEventListener('mouseout', () => {
-                                loginbutton.style.backgroundColor = '#017bcf';
-                            })
-                        }
 
                     }
 
