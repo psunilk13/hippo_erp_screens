@@ -1,0 +1,9 @@
+/* Remove left form sidebar globally */
+.form-sidebar {
+    display: none !important;
+}
+
+/* Expand form to full width */
+.form-layout {
+    margin-left: 0 !important;
+}
